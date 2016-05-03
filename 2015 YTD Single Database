@@ -1,0 +1,362 @@
+import pandas as pd
+import numpy as np
+from openpyxl import Workbook
+import glob
+
+# *** *** ***                               Creating Single Database from all workbook sheets                      *** *** ***  
+  
+# *** *** ***                               January       
+
+df = {}
+# read in the file as Excel and get all the sheetnames
+jan = pd.ExcelFile("Jan_Schools.xlsx")
+sheets = jan.sheet_names
+sheets
+
+# Create empty dataframe
+jan_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the january excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(jan,sheetname=sheet)
+
+# take the empty jan dataframe, make it equal the first sheet in the jan workbook, and then append the rest of the sheets on it
+for sheet in sheets[:-1]:
+    jan_df = jan_df.append(df[sheet])
+
+# *** *** ***                               February 
+
+# read in the file as Excel and get all the sheetnames
+feb = pd.ExcelFile("Feb_Schools.xlsx")
+sheets = feb.sheet_names
+
+
+# Create empty dataframe
+feb_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the february excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(feb,sheetname=sheet)
+
+# take the empty feb dataframe, make it equal the first sheet in the feb workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    feb_df = feb_df.append(df[sheet])
+
+
+
+# *** *** ***                               March 
+
+# read in the file as Excel and get all the sheetnames
+mar = pd.ExcelFile("Mar_Schools.xlsx")
+sheets = mar.sheet_names
+
+
+# Create empty dataframe
+mar_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the march excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(mar,sheetname=sheet)
+
+# take the empty mar dataframe, make it equal the first sheet in the mar workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    mar_df = mar_df.append(df[sheet])
+    
+# *** *** ***                               apr 
+
+# read in the file as Excel and get all the sheetnames
+apr = pd.ExcelFile("Apr_Schools.xlsx")
+sheets = apr.sheet_names
+
+
+# Create empty dataframe
+apr_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the apr excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(apr,sheetname=sheet)
+
+# take the empty apr dataframe, make it equal the first sheet in the apr workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    apr_df = apr_df.append(df[sheet])
+
+# *** *** ***                               May 
+
+# read in the file as Excel and get all the sheetnames
+may = pd.ExcelFile("May_Schools.xlsx")
+sheets = may.sheet_names
+
+
+# Create empty dataframe
+may_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the MAY excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(may,sheetname=sheet)
+
+# take the empty may dataframe, make it equal the first sheet in the may workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    may_df = may_df.append(df[sheet])
+
+# *** *** ***                               jun 
+
+# read in the file as Excel and get all the sheetnames
+jun = pd.ExcelFile("June_Schools.xlsx")
+sheets = jun.sheet_names
+
+
+# Create empty dataframe
+jun_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the jun excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(jun,sheetname=sheet)
+
+# take the empty jun dataframe, make it equal the first sheet in the jun workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    jun_df = jun_df.append(df[sheet])
+    
+# *** *** ***                               jul 
+
+# read in the file as Excel and get all the sheetnames
+jul = pd.ExcelFile("July_Schools.xlsx")
+sheets = jul.sheet_names
+
+
+# Create empty dataframe
+jul_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the jul excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(jul,sheetname=sheet)
+
+# take the empty jul dataframe, make it equal the first sheet in the jul workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    jul_df = jul_df.append(df[sheet])
+    
+# *** *** ***                               aug 
+
+# read in the file as Excel and get all the sheetnames
+aug = pd.ExcelFile("Aug_Schools.xlsx")
+sheets = aug.sheet_names
+
+
+# Create empty dataframe
+aug_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the aug excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(aug,sheetname=sheet)
+
+# take the empty aug dataframe, make it equal the first sheet in the aug workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    aug_df = aug_df.append(df[sheet])
+    
+# *** *** ***                               Sep 
+
+# read in the file as Excel and get all the sheetnames
+sep = pd.ExcelFile("Sep_Schools.xlsx")
+sheets = sep.sheet_names
+
+
+# Create empty dataframe
+sep_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the sep excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(sep,sheetname=sheet)
+
+# take the empty sep dataframe, make it equal the first sheet in the sep workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    sep_df = sep_df.append(df[sheet])
+    
+# *** *** ***                               Oct 
+
+# read in the file as Excel and get all the sheetnames
+oct = pd.ExcelFile("oct_Schools.xlsx")
+sheets = oct.sheet_names
+
+
+# Create empty dataframe
+oct_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the Oct excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(oct,sheetname=sheet)
+
+# take the empty oct dataframe, make it equal the first sheet in the oct workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    oct_df = oct_df.append(df[sheet])
+
+# *** *** ***                               Nov 
+
+# read in the file as Excel and get all the sheetnames
+nov = pd.ExcelFile("nov_Schools.xlsx")
+sheets = nov.sheet_names
+
+
+# Create empty dataframe
+nov_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the nov excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(nov,sheetname=sheet)
+
+# take the empty nov dataframe, make it equal the first sheet in the nov workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    nov_df = nov_df.append(df[sheet])
+
+
+# *** *** ***                               Dec 
+
+# read in the file as Excel and get all the sheetnames
+dec = pd.ExcelFile("Dec_Schools.xlsx")
+sheets = dec.sheet_names
+
+
+# Create empty dataframe
+dec_df = pd.DataFrame()
+
+# for every sheet but the last one, create a new dataframe from the dec excel file
+for sheet in sheets[:-1]:
+    df[(sheet)] = pd.read_excel(dec,sheetname=sheet)
+
+# take the empty dec dataframe, make it equal the first sheet in the dec workbook, and then append the rest of the sheets on it
+for sheet in sheets[1:-1]:
+    dec_df = dec_df.append(df[sheet])
+    
+# *** *** ***                               Norm the Dataframe Columns  
+                            
+jan_df.head(2)
+jan_df = jan_df.rename(columns={"Other (Purchasing, Subcontract)":"Other"})
+jan_df = jan_df.rename(columns={"Blank.1":"Blank"})
+jan_df.head(2)
+
+feb_df.head(2)
+feb_df = jan_df.rename(columns={"Other (Purchasing, Subcontract)":"Other"})
+feb_df.head(2)
+
+mar_df.head(2)
+apr_df.head(2)
+may_df.head(2)
+
+jun_df.head(2)
+jun_df = jun_df.drop(jun_df.columns[4],axis=1)
+jun_df.head(2)
+cols = jun_df.columns.tolist()
+cols
+cols = [u'Bid Type',
+ u'Bid Sponsor',
+ u'Bid Category',
+ u'State',
+ u'Name of Bid',
+ u'Institution Issuing of Bid',
+ u'Pre Bid',
+ u'Due Date',
+ u'COMMENTS or Published AD',
+ u'RFP',
+ u'IFB',
+ u'RFQ',
+ u'RFQual',
+ u'RFB',
+ u'Other ',
+ u'Blank',
+ u'Total',
+ u'Total Filled']
+jun_df = jun_df[cols]
+jun_df.head(2)
+
+jul_df.head(2)
+aug_df.head(2)
+
+sep_df.head(2)
+sep_df = sep_df.drop(sep_df.columns[[0,1,20,21]], axis=1)
+cols = sep_df.columns.tolist()
+cols
+cols = [u'Bid Type',
+ u'Bid Sponsor',
+ u'Bid Category',
+ u'State',
+ u'Name of Bid',
+ u'Institution Issuing of Bid',
+ u'Pre Bid',
+ u'Due Date',
+ u'COMMENTS or Published AD',
+ u'RFP',
+ u'IFB',
+ u'RFQ',
+ u'RFQual',
+ u'RFB',
+ u'Other',
+ u'Blank',
+ u'Total',
+ u'Total Filled']
+sep_df = sep_df[cols]
+sep_df.head(2)
+
+nov_df.head(2)
+dec_df.head(2)
+
+df_names = [jan_df,feb_df,mar_df,apr_df,may_df,jun_df,jul_df,aug_df,sep_df,oct_df,nov_df,dec_df]
+for i in df_names:
+    i.columns=['Bid Type',
+ 'Bid Sponsor',
+ 'Bid Category',
+ 'State',
+ 'Name of Bid',
+ 'Institution Issuing of Bid',
+ 'Pre Bid',
+ 'Due Date',
+ 'COMMENTS or Pblished AD',
+ 'RFP',
+ 'IFB',
+ 'RFQ',
+ 'RFQal',
+ 'RFB',
+ 'Other',
+ 'Blank',
+ 'Total',
+ 'Total Filled']
+
+# *** *** ***                               Compile a master dataframe that is comprised of all months
+ 
+alldata = pd.DataFrame()
+alldata = alldata.append(jan_df)
+alldata = alldata.append(feb_df)
+alldata = alldata.append(mar_df)
+alldata = alldata.append(apr_df)
+alldata = alldata.append(may_df)
+alldata = alldata.append(jun_df)
+alldata = alldata.append(jul_df)
+alldata = alldata.append(aug_df)
+alldata = alldata.append(sep_df)
+alldata = alldata.append(oct_df)
+alldata = alldata.append(nov_df)
+alldata = alldata.append(dec_df)
+
+# Get the dimensions of the dataframe (rows,cols)
+alldata.shape
+
+
+# get all unique values of bid category
+bidcat = pd.unique(alldata['Bid Category'].ravel())
+
+#check the length
+len(bidcat)
+
+#converts the bidcat array to a list
+list(bidcat)
+
+# saves the list to a dataframe
+bidcat_df = pd.DataFrame(bidcat)
+
+from xlsxwriter.utility import xl_rowcol_to_cell
+
+# writes the alldata dataframe to an excel file. 
+with pd.ExcelWriter('YTD 2015 Report_All Months Schools_Completed Apr 2015.xlsx', engine = 'xlsxwriter') as writer:
+    alldata.to_excel(writer, sheet_name = "All Months Schools")
+
+
+
+
+
